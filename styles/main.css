@@ -1,0 +1,163 @@
+/******************************
+ * Constants 
+ ******************************/
+/******************************
+ * Libs
+ ******************************/
+@font-face {
+  font-family: 'ds-digitalnormal';
+  src: url("../assets/fonts/ds-digi-webfont.eot");
+  src: url("../assets/fonts/ds-digi-webfont.eot?#iefix") format('embedded-opentype'), url("../assets/fonts/ds-digi-webfont.woff") format('woff'), url("../assets/fonts/ds-digi-webfont.ttf") format('truetype'), url("../assets/fonts/ds-digi-webfont.svg#ds-digitalnormal") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/******************************
+ * Functions
+ ******************************/
+-moz-prop args {
+  prop: args;
+}
+/******************************
+ * Defaults
+ ******************************/
+body {
+  background: #efefef;
+  font-family: ds-digitalnormal;
+}
+h1 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+li {
+  clear: left;
+}
+/******************************
+ * Layout
+ ******************************/
+.container {
+  height: 500px;
+  width: 600px;
+  margin: 50px auto;
+  padding: 15px;
+  background: #282828;
+  border: 1px solid #fff;
+  -webkit-border-radius: 20px;
+}
+.controls {
+  height: 97px;
+  width: 257px;
+  margin: 24px 0 0 25px;
+}
+/******************************
+ * Components
+ ******************************/
+.clock-frame {
+  width: 304px;
+  height: 145px;
+  background: #313131;
+  background: url("../assets/images/grain.png") top left repeat-x;
+  border: 1px solid #1a1a1c;
+  -webkit-box-shadow: 0px 0px 5.7px 0.3px rgba(0,0,0,0.26);
+  -webkit-border-radius: 4.5px;
+}
+.clock-frame .shine {
+  height: 1px;
+  width: 299px;
+  margin-left: 2.5px;
+  background: #646467;
+  opacity: 0.53;
+  filter: alpha(opacity=53);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=53)";
+}
+.clock-frame .shine .glow {
+  height: 1px;
+  width: 174px;
+  float: right;
+  background: #fff;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #646467), color-stop(0.33333333333333326, #fff), color-stop(1, #646467));
+  background: -webkit-linear-gradient(left, #646467 0%, #fff 33.33333333333333%, #646467 100%);
+  background: -moz-linear-gradient(left, #646467 0%, #fff 33.33333333333333%, #646467 100%);
+  background: -o-linear-gradient(left, #646467 0%, #fff 33.33333333333333%, #646467 100%);
+  background: -ms-linear-gradient(left, #646467 0%, #fff 33.33333333333333%, #646467 100%);
+  background: linear-gradient(left, #646467 0%, #fff 33.33333333333333%, #646467 100%);
+}
+.screen {
+  position: relative;
+  height: 64px;
+  width: 191px;
+  background: #18181a;
+  -webkit-box-shadow: inset 0.5px -2.5px 1px #4c4c4d;
+  -webkit-border-radius: 2px;
+}
+.screen .gradient {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: -webkit-radial-gradient(50% 200%, cover, #fff, #18181a);
+  opacity: 0.17;
+  filter: alpha(opacity=17);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=17)";
+}
+.screen .output {
+  position: absolute;
+  height: 26px;
+  width: 161px;
+  margin: 20px 0 0 15px;
+}
+.screen .output .analog .glow,
+.screen .output .analog .circle {
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  -webkit-border-radius: 50%;
+}
+.screen .output .analog .circle {
+  border: 3px solid #fff;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+}
+.screen .output .analog .circle .hand1,
+.screen .output .analog .circle .hand2 {
+  position: absolute;
+  background: #fff;
+  width: 2px;
+  height: 7px;
+  margin: 20% 0 0 45%;
+  -webkit-box-shadow: 0px 0px 25px 5px #8ddce0;
+}
+.screen .output .analog .circle .hand2 {
+  -webkit-transform: translate(2px, 6px) rotate(140deg);
+}
+.screen .output .analog .glow {
+  -webkit-box-shadow: 0px 0px 50px 3px #8ddce0;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  border: 3px solid #8ddce0;
+}
+.screen .output .digital {
+  width: 82px;
+  line-height: 30px;
+  font-size: 41.22px;
+  margin-left: 47px;
+}
+.screen .output .digital .digits {
+  width: 82px;
+  position: absolute;
+  color: #8ddce0;
+  text-align: right;
+  text-shadow: 0px 0px 25px #8ddce0;
+}
+.screen .output .digital .background-digits {
+  width: 82px;
+  position: absolute;
+  color: #202325;
+  text-align: right;
+}

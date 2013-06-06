@@ -1,0 +1,156 @@
+/******************************
+ * Constants 
+ ******************************/
+fontsDir 	= '../assets/fonts/'
+imgsDir 	= '../assets/fonts/'
+
+/******************************
+ * Libs
+ ******************************/
+@import 'nib'
+@font-face {
+    font-family: 'ds-digitalnormal';
+    src: url(fontsDir + 'ds-digi-webfont.eot');
+    src: url(fontsDir + 'ds-digi-webfont.eot?#iefix') format('embedded-opentype'),
+         url(fontsDir + 'ds-digi-webfont.woff') format('woff'),
+         url(fontsDir + 'ds-digi-webfont.ttf') format('truetype'),
+         url(fontsDir + 'ds-digi-webfont.svg#ds-digitalnormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/******************************
+ * Functions
+ ******************************/
+vendor(prop, args)
+ 	-webkit-{prop} args
+	-moz-{prop} args
+	{prop} args
+  
+/******************************
+ * Defaults
+ ******************************/
+
+body
+	background  #EFEFEF
+	font-family ds-digitalnormal
+
+h1
+	font-size 24px
+	margin-top	20px
+	margin-bottom 50px
+
+ul, ol
+    list-style none
+    padding 0
+  li
+    clear left
+
+/******************************
+ * Layout
+ ******************************/
+
+.container
+
+	height 500px
+	width 600px
+	margin 50px auto
+	padding 15px
+	background #282828
+	border 1px solid #FFF
+	border-radius 20px
+
+.controls
+	height 97px
+	width 257px
+	margin 24px 0 0 25px
+
+/******************************
+ * Components
+ ******************************/
+.clock-frame
+	width 304px
+	height 145px
+	background #313131
+	background url("../assets/images/grain.png") top left repeat-x
+	border 1px solid #1a1a1c
+	box-shadow 0px 0px 5.7px 0.3px rgba(0, 0, 0, 0.26)
+	border-radius 4.5px
+	.shine 
+		height 1px
+		width 299px
+		margin-left 2.5px
+		background #646467
+		opacity: 0.53
+		.glow
+			height 1px
+			width 174px
+			float right
+			background white
+			// opacity 0.53
+			background linear-gradient(left, #646467, white, #646467);
+
+.screen
+	position relative
+	height 64px
+	width 191px
+	background #18181a
+	box-shadow inset .5px -2.5px 1px #4c4c4d
+	border-radius 2px
+	clockHeight = 22
+	.gradient
+		position absolute
+		height 100%
+		width 100%
+		background -webkit-radial-gradient(50% 200%, cover, white, #18181a);
+		opacity 0.17
+	.output
+		position absolute
+		height 26px
+		width 161px
+		margin 20px 0 0 15px
+		.analog
+			.glow, .circle
+				height 22px
+				width 22px
+				position absolute
+				border-radius 50%
+			.circle
+				border 3px solid #FFF
+				opacity 0.9
+				.hand1, .hand2
+					position absolute
+					background #FFF
+					width 2px
+					height 7px
+					margin 20% 0 0 45%
+					box-shadow 0px 0px 25px 5px #8ddce0
+				.hand2
+					vendor('transform', translate(2px, 6px) rotate(140deg))
+			.glow
+				box-shadow 0px 0px 50px 3px #8ddce0
+				opacity 0.5
+				border 3px solid #8ddce0
+		.digital
+			width 82px
+			line-height 30px // Dont really like this as much, Not sure how to do this elegantly
+			font-size 41.22px // This seems to be the correct height
+			margin-left 47px // 22px for the clock width + 25px which is the spacing
+			.digits
+				width @width
+				position absolute
+				color #8ddce0
+				text-align right
+				text-shadow 0px 0px 25px #8ddce0
+			.background-digits
+				width @width
+				position absolute
+				color #202325
+				text-align right
+				
+			
+				
+		
+			
+
+	
