@@ -89,7 +89,60 @@ ul, ol
 			background white
 			// opacity 0.53
 			background linear-gradient(left, #646467, white, #646467);
-
+			
+.slider-container
+	position relative
+	height 15px
+	width 167px
+	margin 16px 0 0 90px
+	.slider-box
+		margin 3px 0 0 0
+		position absolute
+		border 1px solid rgba(255, 255, 255, 0.60)
+		border-radius 25px
+		width 167px 
+		height 6px
+		background-color #18181a
+		box-shadow 0px 1px 0px 0px rgba(78, 78, 80, 0.75)
+		background linear-gradient(top, #18181a, #464648);
+	.slider
+		.ui-slider-handle
+			position absolute
+			background-color white
+			width 15px
+			height 15px
+			cursor pointer
+			font-weight bold
+			color #1C94C4
+			border-radius 15px
+			outline none
+		.ui-slider-range
+			background linear-gradient(top, #ffffff 0%,#eaeaea 100%)
+			position absolute
+			height 100%
+			border-radius 25px
+	.dashes
+		position absolute
+		margin 18px 0 0 2px
+		dash-width = 1px
+		dash-height = 3px
+		dash-color = #696969
+		dash-spacing = 2px
+		width 170px
+		height 10px
+		.dash
+			width dash-width
+			height dash-height
+			background-color dash-color
+			margin-right dash-spacing
+			float left
+		.count-dash
+			width dash-width
+			height (dash-height * 2)
+			background-color dash-color
+			margin-right dash-spacing
+			float left
+		
 .screen
 	position relative
 	height 64px
@@ -136,12 +189,16 @@ ul, ol
 			line-height 30px // Dont really like this as much, Not sure how to do this elegantly
 			font-size 41.22px // This seems to be the correct height
 			margin-left 47px // 22px for the clock width + 25px which is the spacing
-			.digits
+			.digits, .glow-digits
 				width @width
 				position absolute
-				color #8ddce0
 				text-align right
 				text-shadow 0px 0px 25px #8ddce0
+			.digits
+				color #8ddce0
+			.glow-digits
+				color #fff
+				opacity .5
 			.background-digits
 				width @width
 				position absolute

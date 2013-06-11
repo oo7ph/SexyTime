@@ -6,6 +6,7 @@
 		"jquery-ui": "1.10.x",
 		"requirejs": "2.1.6",
 		"creatable": "https://raw.github.com/RaineOrShine/creatable/master/deploy/creatable-3.0.1.js",
+		"livequery": "https://raw.github.com/brandonaaron/livequery/master/jquery.livequery.js",
 		"underscore-amd": "1.4.4"
 	}
 }

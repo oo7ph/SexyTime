@@ -87,6 +87,70 @@ li {
   background: -ms-linear-gradient(left, #646467 0%, #fff 33.33333333333333%, #646467 100%);
   background: linear-gradient(left, #646467 0%, #fff 33.33333333333333%, #646467 100%);
 }
+.slider-container {
+  position: relative;
+  height: 15px;
+  width: 167px;
+  margin: 16px 0 0 90px;
+}
+.slider-container .slider-box {
+  margin: 3px 0 0 0;
+  position: absolute;
+  border: 1px solid rgba(255,255,255,0.6);
+  -webkit-border-radius: 25px;
+  width: 167px;
+  height: 6px;
+  background-color: #18181a;
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(78,78,80,0.75);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #18181a), color-stop(1, #464648));
+  background: -webkit-linear-gradient(top, #18181a 0%, #464648 100%);
+  background: -moz-linear-gradient(top, #18181a 0%, #464648 100%);
+  background: -o-linear-gradient(top, #18181a 0%, #464648 100%);
+  background: -ms-linear-gradient(top, #18181a 0%, #464648 100%);
+  background: linear-gradient(top, #18181a 0%, #464648 100%);
+}
+.slider-container .slider .ui-slider-handle {
+  position: absolute;
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #1c94c4;
+  -webkit-border-radius: 15px;
+  outline: none;
+}
+.slider-container .slider .ui-slider-range {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eaeaea));
+  background: -webkit-linear-gradient(top, #fff 0%, #eaeaea 100%);
+  background: -moz-linear-gradient(top, #fff 0%, #eaeaea 100%);
+  background: -o-linear-gradient(top, #fff 0%, #eaeaea 100%);
+  background: -ms-linear-gradient(top, #fff 0%, #eaeaea 100%);
+  background: linear-gradient(top, #fff 0%, #eaeaea 100%);
+  position: absolute;
+  height: 100%;
+  -webkit-border-radius: 25px;
+}
+.slider-container .dashes {
+  position: absolute;
+  margin: 18px 0 0 2px;
+  width: 170px;
+  height: 10px;
+}
+.slider-container .dashes .dash {
+  width: 1px;
+  height: 3px;
+  background-color: #696969;
+  margin-right: 2px;
+  float: left;
+}
+.slider-container .dashes .count-dash {
+  width: 1px;
+  height: 6px;
+  background-color: #696969;
+  margin-right: 2px;
+  float: left;
+}
 .screen {
   position: relative;
   height: 64px;
@@ -148,12 +212,21 @@ li {
   font-size: 41.22px;
   margin-left: 47px;
 }
-.screen .output .digital .digits {
+.screen .output .digital .digits,
+.screen .output .digital .glow-digits {
   width: 82px;
   position: absolute;
-  color: #8ddce0;
   text-align: right;
   text-shadow: 0px 0px 25px #8ddce0;
+}
+.screen .output .digital .digits {
+  color: #8ddce0;
+}
+.screen .output .digital .glow-digits {
+  color: #fff;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 }
 .screen .output .digital .background-digits {
   width: 82px;
